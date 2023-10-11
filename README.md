@@ -52,6 +52,7 @@ sudo docker-compose exec backend management commands python3 manage.py loadcsv
 ```
 8.
 - Для создания суперпользователя выполните команду:
+  
 ```
 sudo docker-compose exec backend python3 manage.py createcustomsuperuser
 ```
