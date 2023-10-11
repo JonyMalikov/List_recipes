@@ -1,11 +1,7 @@
 from drf_extra_fields.fields import Base64ImageField
 from rest_framework import serializers
-
-from api_foodgram.settings import (
-    MAX_COOKING_TIME,
-    MIN_COOKING_TIME,
-)
 from users.serializers import CustomUserSerializer
+
 from .models import (
     Favorite,
     Ingredient,
@@ -13,6 +9,10 @@ from .models import (
     RecipeIngredient,
     ShoppingList,
     Tag,
+)
+from .settings import (
+    MAX_COOKING_TIME,
+    MIN_COOKING_TIME,
 )
 from .validators import ingredients_validator, tags_validator
 
