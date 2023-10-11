@@ -64,11 +64,11 @@ https://127.0.0.1/
 
 
 ## Используемые технологии
-+ Python
-+ Django
-+ Django Rest Framework
-+ PostgreSQL
-+ Docker
++ [Python](https://www.python.org/) - язык программирования, на котором написан проект.
++ [Django](https://www.djangoproject.com/) - фреймворк для разработки веб-приложений на языке Python.
++ [Django](https://www.django-rest-framework.org/) Rest Framework - надстройка над Django, облегчающая разработку RESTful API.
++ [PostgreSQL](https://www.postgresql.org/) - реляционная база данных, используемая в проекте.
++ [Docker](https://www.docker.com/) - платформа для контейнеризации и развертывания приложений.
 
 
 ## Авторы
