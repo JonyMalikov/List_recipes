@@ -3,21 +3,20 @@
 
 
 ## Установка и запуск
-Клонировать репозиторий и перейти в него в командной строке:
+1.
+Клонируйте репозиторий и перейдите в него в командной строке:
 ```
 git clone https://github.com/JonyMalikov/List_recipes
 ```
 ```
 cd List_recipes
 ```
-
-### Для запуска приложения в контейнерах:
-- Установите Docker
-- Клонируйте репозиторий
-``` git clone git@github.com/JonyMalikov/List_recipes.git ```
-- Создайте и заполните файл .env
+2.
+Для запуска приложения в контейнерах вам понадобится Docker.
+Установите Docker, если вы еще не установили его на своей системе.
 -- -
-### Заполнение .env файла:
+3.
+Создайте файл .env в корневой папке проекта и заполните его следующим содержимым:
 - POSTGRES_DB=foodgram
 - POSTGRES_USER=foodgram_user
 - POSTGRES_PASSWORD=foodgram_password
@@ -28,27 +27,31 @@ cd List_recipes
 - SECRET_KEY=django_secret_key
 - DEBUG=True
 -- -
-- Запустите docker-compose
+4.
+- Запустите контейнеры с помощью команды:
 ``` sudo docker-compose up --build ```
-- Выполните миграции
+5.
+- Выполните миграции с помощью команды:
 ``` sudo docker-compose exec backend python3 manage.py migrate ```
-- Для сбора статики воспользуйтесь командами
+6.
+- Для сбора статики выполните следующие команды:
 ``` sudo docker-compose exec backend python3 manage.py collectstatic ```
 ``` sudo docker compose exec backend cp -r /app/collected_static/. /static/static/ ``` 
-- Для загрузки базы данных ингрединтов
+7.
+- Для загрузки базы данных ингредиентов выполните команду:
 ``` sudo docker-compose exec backend management commands python3 manage.py loadcsv ```
-- Для создания суперпользователя
+8.
+- Для создания суперпользователя выполните команду:
 ``` sudo docker-compose exec backend python3 manage.py createcustomsuperuser ```
 -- -
 
-### Сайт доступен по адресу:
-https://127.0.0.1/
--- -
-
-### Для доступа в админ-зону:
-https://127.0.0.1/
+После завершения этих шагов, ваш сервер будет запущен и ваше приложение будет доступно по адресу
+https://127.0.0.1/. Для доступа в админ-зону, используйте следующие учетные данные:
 - Логин: admin@admin.com
 - Пароль: 12345
+
+Убедитесь, что у вас установлены все зависимости и выполнены все необходимые шаги,
+чтобы успешно установить и запустить проект.
 -- -
 
 
